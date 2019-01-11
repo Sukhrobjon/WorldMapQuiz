@@ -1,0 +1,27 @@
+    .water {
+        fill: #64beff;
+    }
+
+    .border {
+        stroke: #707070;
+        stroke-width: 1.0;
+        stroke-opacity: 0.5;
+    }
+
+    .country {
+        fill: #ffff80;
+    }
+
+    .country:hover {
+        fill: green;
+    }
+
+    .light-water {
+        fill: #beedff;
+    }
+
+    .disputed {
+        fill: #808080;
+    }
+
+   
