@@ -7,7 +7,7 @@ for (let i = 0; i < countries.length; i++) {
 
 
 let countryName = document.getElementById("countryLabel")
-countryName.innerHTML = countriesByCode.ru
+
 function displayCountry(event) {
     const code = event.target.id;
     console.log(code)
