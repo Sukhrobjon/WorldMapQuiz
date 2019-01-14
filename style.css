@@ -3,7 +3,7 @@
     }
     
     .content {
-        max-width: 500px;
+        max-width: 1200px;
         margin: auto;
         background: white;
         padding: 10px;
@@ -34,10 +34,39 @@
         fill: #808080;
     }
 
-   #svgMap {
+   /* #svgMap {
         
         max-width: 500px;
         margin: auto;
         background: white;
         padding: 10px;
-   }
+   } */
+
+/* Tooltip */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
