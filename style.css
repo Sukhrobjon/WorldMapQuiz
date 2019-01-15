@@ -34,24 +34,23 @@
         fill: #808080;
     }
 
-   /* #svgMap {
-        
-        max-width: 500px;
-        margin: auto;
-        background: white;
-        padding: 10px;
-   } */
+   .svgMap {
+       display: flex;
+       justify-content: center;
+   }
 
+   #countryLabel {
+       float: right;
+   }
 /* Tooltip */
 
 .tooltip {
-    position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {
-    visibility: hidden;
+    /* visibility: hidden; */
     width: 120px;
     background-color: black;
     color: #fff;
@@ -62,9 +61,9 @@
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-    bottom: 100%;
+    /* bottom: 100%;
     left: 50%;
-    margin-left: -60px;
+    margin-left: -60px; */
 }
 
 .tooltip:hover .tooltiptext {
