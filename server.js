@@ -18,7 +18,7 @@ function overCountry(event) {
     const code = event.target.id;
     // const countryTooltip = countriesByCode[code]
     const countryTooltip = countriesByCode[code]
-    tooltipSpan.innerHTML = countryTooltip
+    tooltipSpan.innerHTML = "Click on " + countryTooltip
 
 }
 let countryName = document.getElementById("countryLabel")
