@@ -1,18 +1,7 @@
 <!-- views/comments-new.handlebars -->
 
 <form method="POST" action="/comments">
-    <fieldset>
-        <legend>New Comment</legend>
-        <!-- TITLE -->
-        <p>
-            <label for="title">Title</label><br>
-            <input type="text" name="title" />
-        </p>
-        <p>
-            <label for="content">Comment content</label><br>
-            <input type="text" name="content" />
-        </p>
-    </fieldset>
+    {{> comments-form }}
 
     <!-- BUTTON -->
     <p>

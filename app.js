@@ -1,5 +1,6 @@
 // requirements
 const express = require('express')
+const methodOverride = require('method-override')
 const app = express()
 const port = process.env.PORT || 3000;
 var exphbs = require('express-handlebars');
@@ -11,7 +12,8 @@ app.set('view engine', 'handlebars');
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
-
+// override with POST having ?_method=DELETE or ?_method=PUT
+app.use(methodOverride('_method'))
 // Connecting to the MongoDB 
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/LearnGeography');
@@ -54,6 +56,24 @@ app.get('/comments/:id', (req, res) => {
     }).catch((err) => {
         console.log(err.message);
     })
+})
+
+// EDIT
+app.get('/comments/:id/edit', (req, res) => {
+    Comment.findById(req.params.id, function (err, comment) {
+        res.render('comments-edit', { comment: comment });
+    })
+});
+
+// UPDATE
+app.put('/comments/:id', (req, res) => {
+    Comment.findByIdAndUpdate(req.params.id, req.body)
+        .then(comment => {
+            res.redirect(`/comments/${comment._id}`)
+        })
+        .catch(err => {
+            console.log(err.message)
+        })
 })
 app.listen(port, () => {
     console.log('App listening on port 3000!')

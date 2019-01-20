@@ -1,0 +1,11 @@
+<!-- views/comments-edit.handlebars -->
+
+<form method="POST" action="/comments/{{comment._id}}?_method=PUT">
+    {{> comments-form }}
+    <!-- BUTTON -->
+    <p>
+        <button type="submit">Save Comment</button>
+        {{!-- <button type="button">Cancel</button> --}}
+        <a href="/">Cancel</a>
+    </p>
+</form>
