@@ -1,8 +1,14 @@
 <!-- comments-index -->
 <h1>Comments</h1>
 
-<a href="/comments/new">Add new comment</a>
-
+{{!-- <div class="row">
+    {{#each comments}}
+    <div class="col-md-3">
+        <h2><a href="/comments/{{this._id}}">{{this.title}}</a></h2>
+        <small>{{this.content}}</small>
+    </div>
+    {{/each}}
+</div> --}}
 {{#each comments}}
 <h2><a href="/comments/{{this._id}}">{{this.title}}</a></h2>
 <small>{{this.content}}</small>

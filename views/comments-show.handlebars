@@ -1,11 +1,15 @@
 <!-- views/comments-show.handlebars -->
 <a href="/">Back to Home</a>
-<h1>{{comment.title}}</h1>
-<h2>{{comment.content}}</h2>
-<p><a href="/comments/{{comment._id}}/edit">Edit</a></p>
-<!-- Delete button -->
-<p>
-    <form method="POST" action="/comments/{{comment._id}}?_method=DELETE">
-        <button type="submit">Delete</button>
-    </form>
-</p>
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <h1>{{comment.title}}</h1>
+        <h2>{{comment.content}}</h2>
+        <p><a href="/comments/{{comment._id}}/edit">Edit</a></p>
+        <!-- Delete button -->
+        <p>
+            <form method="POST" action="/comments/{{comment._id}}?_method=DELETE">
+                <button type="submit">Delete</button>
+            </form>
+        </p>
+    </div>
+</div>

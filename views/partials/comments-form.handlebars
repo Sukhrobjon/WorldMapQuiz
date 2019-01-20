@@ -3,15 +3,17 @@
     <fieldset>
         <legend>Edit Comment</legend>
         <!-- TITLE -->
-        <p>
-            <label for="comment-title">Title</label><br>
-            <input id="comment-title" type="text" name="title" value="{{comment.title}}" />
-        </p>
-
+        <div class="form-group">
+            <p>
+                <label for="comment-title">Title</label><br>
+                <input id="comment-title" type="text" name="title" value="{{comment.title}}" />
+            </p>
+        </div>
         <!-- content -->
-        <p>
-            <label for="content">content</label><br>
-            <input id="content" type="text" name="content" value="{{comment.content}}" />
-        </p>
-
+        <div class="form-group">
+            <p>
+                <label for="content">content</label><br>
+                <input id="content" type="text" name="content" value="{{comment.content}}" />
+            </p>
+        </div>  
     </fieldset>

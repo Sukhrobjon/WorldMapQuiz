@@ -1,11 +1,14 @@
 <!-- views/comments-new.handlebars -->
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <form method="POST" action="/comments">
+            {{> comments-form }}
 
-<form method="POST" action="/comments">
-    {{> comments-form }}
+            <!-- BUTTON -->
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Save Comment</button>
+            </div>
 
-    <!-- BUTTON -->
-    <p>
-        <button type="submit">Save Comment</button>
-    </p>
-
-</form>
+        </form>
+    </div>
+</div>
