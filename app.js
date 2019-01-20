@@ -74,7 +74,18 @@ app.put('/comments/:id', (req, res) => {
         .catch(err => {
             console.log(err.message)
         })
+});
+
+// DELETE
+app.delete('/comments/:id', function (req, res) {
+    console.log("DELETE review")
+    Comment.findByIdAndRemove(req.params.id).then((comment) => {
+        res.redirect('/');
+    }).catch((err) => {
+        console.log(err.message);
+    })
 })
+
 app.listen(port, () => {
     console.log('App listening on port 3000!')
 })
