@@ -1,0 +1,25 @@
+{
+  "name": "learngeography",
+  "version": "1.0.0",
+  "description": "User can learn about general world map geography by guessing  the country",
+  "main": "countries.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sukhrobjon/WorldMapQuiz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sukhrobjon/WorldMapQuiz/issues"
+  },
+  "homepage": "https://github.com/Sukhrobjon/WorldMapQuiz#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "nodemon": "^1.18.9"
+  }
+}
