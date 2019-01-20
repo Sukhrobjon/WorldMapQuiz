@@ -4,7 +4,6 @@
   "description": "User can learn about general world map geography by guessing  the country",
   "main": "countries.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
   "repository": {
