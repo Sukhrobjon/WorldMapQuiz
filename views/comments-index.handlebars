@@ -4,6 +4,6 @@
 <a href="/comments/new">Add new comment</a>
 
 {{#each comments}}
-<h3>{{this.title}}</h3>
+<h2><a href="/comments/{{this._id}}">{{this.title}}</a></h2>
 <small>{{this.content}}</small>
 {{/each}}

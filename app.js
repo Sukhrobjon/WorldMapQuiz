@@ -17,8 +17,8 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/LearnGeography');
 // comment model - Data layer
 const Comment = mongoose.model('Review', {
-  title: String,
-  content: String
+    title: String,
+    content: String
 });
 
 // INDEX
@@ -39,7 +39,18 @@ app.get('/comments/new', (req, res) => {
 app.post('/comments', (req, res) => {
     Comment.create(req.body).then((comment) => {
         console.log(comment);
-        res.redirect('/');
+        res.redirect(`/comments/${comment._id}`) // Redirect to reviews/:id/${review._id}`) // Redirect to reviews/:id
+    }).catch((err) => {
+        console.log(err.message);
+    })
+})
+
+// SHOW
+app.get('/comments/:id', (req, res) => {
+    Comment.findById(req.params.id).then((comment) => {
+        res.render('comments-show', {
+            comment: comment
+        })
     }).catch((err) => {
         console.log(err.message);
     })
