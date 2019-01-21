@@ -1,6 +1,7 @@
 <!-- views/partials/reply-form.handlebars -->
 
-<form>
+<form action="/comments/replies" method="post">
+    <input type="hidden" value="{{comment._id}}" name="commentId">
     <fieldset>
         <legend>Reply</legend>
         <!-- TITLE -->

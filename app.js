@@ -7,6 +7,7 @@ var exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 // Controllers
 const comments = require('./controllers/comments');
+const replies = require('./controllers/replies.js');
 
 // Connecting to the MongoDB 
 const mongoose = require("mongoose");
@@ -25,6 +26,7 @@ app.use(methodOverride('_method'))
 app.use(bodyParser.urlencoded({ extended: true }));
 
 comments(app)
+replies(app)
 
 app.listen(port, () => {
     console.log('App listening on port 3000!')

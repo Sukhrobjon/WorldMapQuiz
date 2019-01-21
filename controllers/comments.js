@@ -1,6 +1,8 @@
 const Comment = require('../models/comment.js')
+const Reply = require('../models/reply.js');
 
 const Comments = function (app) {
+    
     // INDEX
     app.get('/', (req, res) => {
     Comment.find()
@@ -29,13 +31,18 @@ const Comments = function (app) {
     // SHOW
     app.get('/comments/:id', (req, res) => {
         Comment.findById(req.params.id).then((comment) => {
-            res.render('comments-show', {
-                comment: comment
-            })
+            Reply.find({
+               commentId: comment._id
+            }).then(replies => {
+               res.render('comments-show', {
+                   comment: comment,
+                   replies: replies
+               });
+           });
         }).catch((err) => {
-            console.log(err.message);
+           console.log(err.message);
         })
-    })
+    });
 
     // EDIT
     app.get('/comments/:id/edit', (req, res) => {

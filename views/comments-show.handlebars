@@ -15,5 +15,11 @@
             
         <!-- Reply form -->
         {{> reply-form}}
+        <hr>
+        
+        <!-- Show Reply -->
+        {{#each replies}}
+        {{> reply}}
+        {{/each}}
     </div>
 </div>
