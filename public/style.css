@@ -1,5 +1,5 @@
     body {
-        background: #555;
+        /* background: #555; */
         font-family: 'Kanit',
         sans-serif;
         color: green;
@@ -8,7 +8,7 @@
     .content {
         max-width: 1200px;
         margin: auto;
-        background-color: black;
+        /* background-color: black; */
         padding: 10px;
         
     }
