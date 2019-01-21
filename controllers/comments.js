@@ -66,7 +66,7 @@ const Comments = function (app) {
 
     // DELETE
     app.delete('/comments/:id', function (req, res) {
-        console.log("DELETE review")
+        console.log("Comment Deleted")
         Comment.findByIdAndRemove(req.params.id).then((comment) => {
             res.redirect('/');
         }).catch((err) => {
