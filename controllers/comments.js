@@ -2,6 +2,10 @@ const Comment = require('../models/comment.js')
 const Reply = require('../models/reply.js');
 
 const Comments = function (app) {
+
+    app.get('/map', (req, res) => {
+        res.render('index')
+    });
     
     // INDEX
     app.get('/', (req, res) => {
@@ -22,7 +26,7 @@ const Comments = function (app) {
     app.post('/comments', (req, res) => {
         Comment.create(req.body).then((comment) => {
             console.log(comment);
-            res.redirect(`/comments/${comment._id}`) // Redirect to reviews/:id/${review._id}`) // Redirect to reviews/:id
+            res.redirect(`/comments/${comment._id}`) 
         }).catch((err) => {
             console.log(err.message);
         })

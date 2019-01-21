@@ -11,6 +11,16 @@ const Replies = function(app) {
             console.log(err.message);
         });
     });
+
+    // REPLY: DELETE
+    app.delete('/comments/replies/:id', function (req, res) {
+        console.log("DELETE comment")
+        Reply.findByIdAndRemove(req.params.id).then((reply) => {
+            res.redirect(`/comments/${reply.commentId}`);
+        }).catch((err) => {
+            console.log(err.message);
+        })
+    });
 }
     
 module.exports = Replies;

@@ -3,5 +3,11 @@
 <div class="card">
     <div class="card-block">
         <h4 class="card-title">{{this.title}}</h4>
+        <!-- Delete link -->
+        <p>
+            <form method="POST" action="/comments/replies/{{this._id}}?_method=DELETE">
+                <button class="btn btn-link" type="submit">Delete</button>
+            </form>
+        </p>
     </div>
 </div>
