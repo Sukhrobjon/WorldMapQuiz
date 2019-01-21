@@ -24,6 +24,7 @@ app.set('view engine', 'handlebars');
 // override with POST having ?_method=DELETE or ?_method=PUT
 app.use(methodOverride('_method'))
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
 comments(app)
 replies(app)
