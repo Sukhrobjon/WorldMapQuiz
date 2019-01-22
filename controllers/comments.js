@@ -3,9 +3,9 @@ const Reply = require('../models/reply.js');
 
 const Comments = function (app) {
 
-    app.get('/map', (req, res) => {
-        res.render('index')
-    });
+    // app.get('/', (req, res) => {
+    //     res.render('index')
+    // });
     
     // INDEX
     app.get('/', (req, res) => {

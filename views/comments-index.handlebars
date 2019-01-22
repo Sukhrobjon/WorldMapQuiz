@@ -1,4 +1,5 @@
 <!-- comments-index -->
+{{> index}}
 <h1>Comments</h1>
 
 {{!-- <div class="row">
@@ -9,6 +10,7 @@
     </div>
     {{/each}}
 </div> --}}
+
 {{#each comments}}
 <h2><a href="/comments/{{this._id}}">{{this.title}}</a></h2>
 <small>{{this.content}}</small>
