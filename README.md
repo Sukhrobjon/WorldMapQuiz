@@ -1,38 +1,26 @@
-# Geo Quiz
+# Quiz Map
 
 User can learn about general world map geography by guessing 
 the country
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ### Prerequisites
 
-What things you need to install the software and how to install them
+It is assumed that you have MongoDB is installed on your local machine.
 
-```
-Give examples
-```
 
 ### Installing
+1. Clone the project 
+`git clone https://github.com/Sukhrobjon/WorldMapQuiz.git`
+2. Now inside project run `npm install`
+3. `npm run start`
+4. Or you can check it out [here](https://world-map-quiz-mvp.herokuapp.com/).
 
-A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+### What is next 
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
+* [ ] Improving user experince 
+* [ ] Displaying fun facts about the current country
+* [ ] Adding more Quizes
 
 ## License
 
