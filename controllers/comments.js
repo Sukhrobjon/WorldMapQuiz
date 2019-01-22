@@ -3,10 +3,6 @@ const Reply = require('../models/reply.js');
 
 const Comments = function (app) {
 
-    // app.get('/', (req, res) => {
-    //     res.render('index')
-    // });
-    
     // INDEX
     app.get('/', (req, res) => {
     Comment.find()
